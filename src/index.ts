@@ -95,8 +95,8 @@ async function main(){
         console.log("Subscription created.");
 
         // setup subscriptions for each tag
-        for (let x:number = 0; x < tags.length; x++) {
-            setupTagSubscriptions (subscription, tags[x],mqttclient,tags,topics); // call setupTagSubscriptions with each element of tags[]
+        for (let tagIndex:number = 0; tagIndex < tags.length; tagIndex++) {
+            setupTagSubscriptions (subscription, tags[tagIndex],mqttclient,tags,topics); // call setupTagSubscriptions with each element of tags[]
         }
         
         // set up asynchronous disconnection support via signals
