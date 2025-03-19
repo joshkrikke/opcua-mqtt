@@ -1,0 +1,66 @@
+{
+    "opc": {
+        "endpoint": "opc.tcp://192.168.0.212:26543",
+        "connection": {
+        "applicationName": "OPC-UA Reader",
+        "connectionStrategy": {
+            "initialDelay": 250,
+            "maxDelay": 500,
+             "maxRetry": 1
+            },
+        "endpointMustExist": false
+        },
+        "userIdentity": {
+        "needed": false,
+        "username": "user",
+        "password": "user"
+        },
+        "subscription": {
+        "parameters": {
+            "requestedPublishingInterval": 1000,
+            "requestedLifetimeCount": 100,
+            "requestedMaxKeepAliveCount": 10,
+            "maxNotificationsPerPublish": 100,
+            "publishingEnabled": true,
+            "priority": 10
+            }
+        }
+    },
+    "mqtt": {
+        "brokerUrl": "mqtt://192.168.0.211",
+        "mqttPort": 1883,
+        "baseTopic": "magna/iotacademy/conestoga/smart/presorter/3/robot2/"
+    },
+    "tags": [
+            "HMI_GVL.M.Rob2.INITIALIZED",		
+            "HMI_GVL.M.Rob2.RUNNING",			
+            "HMI_GVL.M.Rob2.WSVIOLATION",		
+            "HMI_GVL.M.Rob2.PAUSED",				
+            "HMI_GVL.M.Rob2.SPEEDPERCENTAGE",		
+            "HMI_GVL.M.Rob2.FINISHEDPARTNUM",
+            "HMI_GVL.M.Rob2.ROBOTPOS.X",
+            "HMI_GVL.M.Rob2.ROBOTPOS.Y",
+            "HMI_GVL.M.Rob2.ROBOTPOS.Z",
+            "HMI_GVL.M.Rob2.ROBOTPOS.W",
+            "HMI_GVL.M.Rob2.MACTTORQUE[1]",
+            "HMI_GVL.M.Rob2.MACTTORQUE[2]",
+            "HMI_GVL.M.Rob2.MACTTORQUE[3]",
+            "HMI_GVL.M.Rob2.MACTTORQUE[4]"	 
+        ],
+    "topics": [
+            "initialized",		
+            "running",			
+            "wsviolation",		
+            "paused",				
+            "speedpercentage",		
+            "finishedpartnum",
+            "robotpos_x",
+            "robotpos_y",
+            "robotpos_z",
+            "robotpos_w",
+            "macttorque_1",
+            "macttorque_2",
+            "macttorque_3",
+            "macttorque_4"	 
+        ]
+}   
